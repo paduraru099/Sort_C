@@ -1,0 +1,78 @@
+<html>
+    
+<head>
+    <title>Merge Sort</title>
+    <link rel="stylesheet" type="text/css" href="Merge-Sort.css">
+        <meta charset="utf-8">
+    
+</head>
+    <div id = "informatie">
+        <h1>Merge-Sort</h1>
+        <h2> Sortare eficienta</h2>
+        <ul>
+        <li>Metoda de sortare apartine lui O ( n * log<sub>2</sub>n )</li>
+        <li>Idee de eficientizare a procesului de sortare: </li>
+            <ul type = "-">
+                <li>Se împarte secvența inițială în două subsecvențe </li>
+                <li>Se sortează fiecare subsecvență</li>
+                <li>Se combină subsecvențele sortate</li>
+            </ul>
+        </ul>
+        <h2>Sortare prin interclasare</h2>
+        <h3>Idee de baza:</h3>
+        <ul>
+            <li>Imparte x[1..n] în două subtablouri x[1..[n/2]] and x[[n/2]+1..n]</li>
+            <li>Sortează fiecare subtablou</li>
+            <li>Interclasează elementele subtablourilor x[1..[n/2]] si x[[n/2]+1..n]
+și construiește tabloul sortat t[1..n] . Transferă conținutul tabloului
+temporar t în x[1..n]</li>
+        </ul>
+        <h3>Observații:</h3>
+        <ul>
+            <li>Valoarea critică: 1 (un tablou conținând un singur element este
+implicit sortat)</li>
+            <li>Valoarea critică poate fi mai mare decât 1 (de exemplu, 10) iar
+sortarea subtablourilor cu un număr de elemente mai mic decât
+valoarea critică se poate realiza cu unul dintre alg. elementari
+(ex:. Sortare prin inserție)</li>
+        </ul>
+        <img src="C:\Users\Razvan\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\merge.jpg" width="500px">
+        <h2>Algoritm:</h2>
+    </div>
+    <div id = "Cod">
+        <p>void merge(int a[], int i, int m, int j)</p>
+        <p>{</p>
+        <p class = "rand2"> int b[1000], x = i, k = 1, y = m + 1;</p>
+        <p class = "rand2"> while( x &lt;= m && y &lt;= j ) </p>
+        <p class = "rand3"> if( a[ x ] &lt; a[ i ] )</p>
+        <p class = "rand4"> b[ k++ ] = a [ x++ ];</p>
+        <p class = "rand3"> else </p>
+        <p class = "rand4"> b[ k++ ] = a [ y++ ];</p>
+        <p class = "rand2"> while( x &lt;= m )</p>
+        <p class = "rand3"> b[ k++ ] = a[ x++ ];</p>
+        <p class = "rand2"> while( y &lt;= j )</p>
+        <p class = "rand3"> b[ k++ ] = a[ y++ ];</p>
+        <p class = "rand2"> int t = i;</p>
+        <p class = "rand2"> for ( k = 1; k &lt;= ( j - i ) + 1; k++ )</p>
+        <p class = "rand3"> a [ t++ ] = b[ k ];</p>
+        <p>}</p>
+        <br>
+        <br>
+        <p> void div(int a[], int i, int j ) </p>
+        <p>{</p>
+        <p class = "rand2">if( i &lt; j )</p>
+        <p class = "rand2">{</p>
+        <p class = "rand3"> int m = ( i + j) / 2; </p>
+        <p class = "rand3">div( a, i, m );</p>
+        <p class = "rand3">div( a, m + 1, j);</p>
+        <p class = "rand3">merge(a, m, j);</p>
+        <p class = "rand2">}</p>
+        <p>}</p>
+        
+    
+    
+    </div>
+
+
+
+</html>

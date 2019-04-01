@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Bubble - Sort</title>
+    <link rel="stylesheet" type="text/css" href="Bubble-Sort.css">
+        <meta charset="utf-8">
+    
+</head>
+    
+<body>
+    
+    <div id="Informatie">
+    <h1> Sortare prin selecţie directă</h1>
+        <p>Sortarea prin selecţia minimului (sau maximului) este metoda de ordonare prin selectarea
+unui element şi plasarea lui pe poziţia sa finală direct în tabloul A.
+De exemplu, în caz de ordonare crescătoare, pornind de la primul element se caută valoarea
+minimă din tablou. Aceasta se aşează pe prima poziţie printr-o interschimbare între
+elementul de pe prima poziţie şi elementul minim de pe poziţia k. Apoi, se reia algoritmul,
+pornind de la a doua poziţie şi se caută minimul între elementele a2, ..., an. Acesta se interschimbă
+cu al doilea dacă este cazul. Procedeul se continuă până la ultimul element</p>
+        
+    </div>
+    <div id = "Cod">
+        <h2> Subalgoritm</h2>
+        <p> void selection-sort(int a[], int n)</p>
+        <p>{</p>
+        <p class = "rand2">for(int i = 1; i &lt; n; ++i )</p>
+        <p class = "rand2">{</p>
+        <p class = "rand3">int min_act = i</p>
+        <p class = "rand3"> for(int j = i + 1; j &lt;= n; ++j) </p>
+        <p class = "rand4"> if( a[ j ] &lt; a[ min_act ])</p>
+        <p class = "rand5"> min_act = i;</p>
+        <p class = "rand3">int aux = a [ min_act ];</p>
+        <p class = "rand3"> a[ min_act ] = a [ i ];</p>
+        <p class = "rand3"> a[ i ] = aux; </p>
+        <p class = "rand2">}</p>
+        <p>}</p>
+    </div>
+    
+    
+</body>
+
+
+</html>

@@ -1,0 +1,99 @@
+<html>
+
+    <head> 
+        
+        
+        <title>Quick-Sort</title>
+        <link rel="stylesheet" type="text/css" href="Quick-Sort.css">
+        <meta charset="utf-8">
+        
+        
+    </head>
+    
+    <body>
+        
+        
+        
+    <div id="informatie">
+        <h1>Quick-Sort</h1>
+        <p>
+        <span lang=EN-AU
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Fie tab un tablou cu n
+componente. Sortarea prin aceasta metoda are la baza urmatorul principiu:
+practic tabloul este ordonat cand pentru fiecare element din tablou v[poz],
+elementele situalte la stanga sunt mai mici<span style="mso-spacerun: yes"> 
+</span>v[poz] iar cele din dreapta sunt mai mari sau egale decat v[poz].
+Sortarea tabloului tab decurge astfel: <o:p></o:p></span>
+        <p>
+            <span lang=EN-AU
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>La un moment dat se
+prelucreaza o secventa din vector cu indecsi cuprinsi intre p si u<o:p></o:p></span></p>
+        <p><span lang=EN-AU
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><span style="mso-spacerun:
+yes">  </span>- se ia una din aceste componente, fie ea <b style='mso-bidi-font-weight:
+normal'>piv=v[p],</b> care se considera element pivot; <o:p></o:p></span></p>
+        <p>
+            <span lang=EN-AU><span style="mso-spacerun: yes"> 
+</span>- se fac în tablou interschimbări de componente, astfel încât toate cele
+mai mici decât valoarea pivot sa treaca în stânga acesteia, iar elementele cu
+valoare mai mare decât pivot sa treacă în dreapta; prin această operaţie se va
+deplasa şi valoarea pivot, astfel ca ea nu se va mai gasi pe pozitia initiala
+ci pe o pozitie corespunzatoare relatiei de ordine. Fie aceasta k. Atentie! In
+urma acestui set de operatii elementele din stanga sunt mai mici decat pivotal
+dar nu neaparat si in ordine. La fel cele din dreapta sunt mai mari dar nu
+neaparat si in ordine </span>
+        </p>
+        <p>
+        <span lang=EN-AU style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><span style="mso-spacerun: yes"> </span>Se continuă setul de operatii
+similare, aplicând recursiv metoda pentru zona de tablou situată în stânga
+componentei pivot şi pentru cea din dreapta acesteia; <o:p></o:p></span></p>
+
+        
+        <p>
+            <![if !supportLists]><span lang=EN-AU style='font-size:
+12.0pt;mso-bidi-font-size:10.0pt'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=EN-AU style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>oprirea recursiei se face când lungimea zonei de tablou care trebuie
+sortată devine egala cu 1. <o:p></o:p></span>
+        </p>
+        
+        <p>O metoda de implementare ar fi urmatoarea:</p>
+     
+    </div>
+    <div id = "Cod"> 
+    
+        
+        <p class="rand1"> void Quick-Sort(int st, int dr, int a[ ] )</p>
+        <p class="rand1"> { </p>
+        
+        <p class = "rand2"> int i = st, j = dr, pivot = a[( st + dr ) / 2];</p>
+        <p class = "rand2"> while( i &lt;= j)</p>
+        <p class = "rand2"> { </p>
+        <p class = "rand3"> while( a[i] &lt; pivot) i++;</p>
+        <p class = "rand3"> while( a[j] &gt; pivot) j--;</p>
+        <p class = "rand3"> if(i &lt; j) </p>
+        <p class = "rand3"> { </p>
+        <p class = "rand4"> int aux = a[i];</p>
+        <p class = "rand4"> a[i] = a[j];</p>
+        <p class = "rand4"> a[j] = aux;</p>
+        <p class = "rand4"> i++;</p>
+        <p class = "rand4"> j--;</p>
+        <p class = "rand3"> } </p>
+        <p class = "rand2"> } </p>
+        <p class = "rand2"> if (i &lt; dr) QuickSort(i, dr);</p>
+        <p class = "rand2"> if (st &lt; j) QuickSort(st, j);</p>
+        <p class = "rand1"> } </p>
+        <p> </p>
+        <p> </p>
+        
+        
+        
+    </div>
+        
+    
+    
+    </body>
+
+
+</html>

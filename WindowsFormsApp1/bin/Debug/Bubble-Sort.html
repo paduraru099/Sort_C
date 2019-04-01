@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Bubble - Sort</title>
+    <link rel="stylesheet" type="text/css" href="Bubble-Sort.css">
+        <meta charset="utf-8">
+    
+</head>
+    
+<body>
+    
+    <div id="Informatie">
+    <h1> Metoda Bulelor (bubble - sort)</h1>
+        <p>Algoritmul constă în parcurge
+            rea tabloului A de mai multe ori, până când devine ordonat. La fiecare pas se com­pa­ră două elemente alăturate. Dacă a[i] &lt; a[i + 1], (i = 1, 2, ..., n – 1), atunci cele două va­lori se interschimbă între ele. Controlul acţiunii repetitive este dat de variabila boole­a­nă ok, care la fiecare reluare a algoritmului primeşte valoarea ini­ţi­a­lă adevărat, care se schim­­bă în fals dacă s-a efectuat o interschimbare de două ele­men­te alăturate. În mo­men­tul în care tabloul A s-a parcurs fără să se mai efectueze nici o schim­bare, ok ră­mâ­ne cu valoarea iniţială adevărat şi algoritmul se termină, deoarece ta­bloul este or­do­nat.
+Interschimbarea a două elemente se realizează prin intermediul variabilei auxiliare aux care are acelaşi tip ca şi elementele tabloului.</p>
+        
+    </div>
+    <div id = "Cod">
+        <h2> Subalgoritm</h2>
+        <p> void bubble-sort(int a[], int n)</p>
+        <p>{</p>
+        <p class = "rand2"> bool ok = 0;</p>
+        <p class = "rand2"> while( ok == 0 )</p>
+        <p class = "rand2">{</p>
+        <p class = "rand3"> ok = 1;</p>
+        <p class = "rand3">for( int i = 1; i &lt; n;++i )</p>
+        <p class = "rand3">{</p>
+        <p class = "rand4">if( a[ i + 1] &lt; a[ i ] ) </p>
+        <p class = "rand4">{</p>
+        <p class = "rand5">int aux = a[ i ];</p>
+        <p class = "rand5">a[ i ] = a [ i + 1 ];</p>
+        <p class = "rand5">a[ i + 1 ] = aux;</p>
+        <p class = "rand4">}</p>
+        <p class = "rand3">}</p>
+        <p class = "rand2">}</p>
+        <p>}</p>
+    </div>
+    
+    
+</body>
+
+
+</html>
